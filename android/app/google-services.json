@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "471338175495",
+    "firebase_url": "https://to-do-firebase-37b97-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "to-do-firebase-37b97",
+    "storage_bucket": "to-do-firebase-37b97.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:471338175495:android:7fd03fac11189685406ea2",
+        "android_client_info": {
+          "package_name": "com.example.listify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "471338175495-tq81arsgkuedl8pacu9c67j1jnahqf54.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPFJ5V3kz-RlU6I58jSGhorIbSrhNDJMY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "471338175495-tq81arsgkuedl8pacu9c67j1jnahqf54.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "471338175495-8ss1ok3dmhk6p7nblecqv5u6ifk5eihf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.listify.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:471338175495:android:27c83bd05d057ede406ea2",
+        "android_client_info": {
+          "package_name": "nes.todoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "471338175495-tq81arsgkuedl8pacu9c67j1jnahqf54.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPFJ5V3kz-RlU6I58jSGhorIbSrhNDJMY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "471338175495-tq81arsgkuedl8pacu9c67j1jnahqf54.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "471338175495-8ss1ok3dmhk6p7nblecqv5u6ifk5eihf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.listify.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>471338175495-8ss1ok3dmhk6p7nblecqv5u6ifk5eihf.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.471338175495-8ss1ok3dmhk6p7nblecqv5u6ifk5eihf</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAyxEnIPAYxYBh2t65fDjrxgeW7gSkhZ-o</string>
+	<key>GCM_SENDER_ID</key>
+	<string>471338175495</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.listify.RunnerTests</string>
+	<key>PROJECT_ID</key>
+	<string>to-do-firebase-37b97</string>
+	<key>STORAGE_BUCKET</key>
+	<string>to-do-firebase-37b97.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:471338175495:ios:c5be76352b779856406ea2</string>
+	<key>DATABASE_URL</key>
+	<string>https://to-do-firebase-37b97-default-rtdb.europe-west1.firebasedatabase.app</string>
+</dict>
+</plist>
