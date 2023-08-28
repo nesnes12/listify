@@ -8,6 +8,7 @@ import 'firebase_options.dart';
 
 
 void main()  async {
+  WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
   options: DefaultFirebaseOptions.currentPlatform,
 );
@@ -114,12 +115,12 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 decoration: InputDecoration(
                   labelText: "Username",
                   labelStyle: const TextStyle(color: Colors.black45,fontWeight: FontWeight.w400),
-                  prefixIcon: const Icon(Icons.person_outline, color: AppColors.faderGreeney,),
+                  prefixIcon: const Icon(Icons.person_outline, color: AppColors.greeney,),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
                   enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(color: AppColors.faderGreeney),
+                    borderSide: const BorderSide(color: AppColors.greeney),
                     borderRadius: BorderRadius.circular(10),
                   ),
                 ),
@@ -138,7 +139,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   labelText: "Password",
                   floatingLabelStyle: const TextStyle(color: AppColors.greeney),
                   labelStyle: const TextStyle(color: Colors.black45,fontWeight: FontWeight.w400),
-                  prefixIcon: const Icon(Icons.password_outlined, color: AppColors.faderGreeney,),
+                  prefixIcon: const Icon(Icons.password_outlined, color: AppColors.greeney,),
                   suffixIcon: IconButton(
                       onPressed: () {
                         setState(() {
@@ -146,15 +147,15 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                         });
                       },
                       icon: _obscurePassword
-                          ? const Icon(Icons.visibility_outlined,color: AppColors.faderGreeney)
-                          : const Icon(Icons.visibility_off_outlined,color: AppColors.faderGreeney)),
+                          ? const Icon(Icons.visibility_outlined,color: AppColors.greeney)
+                          : const Icon(Icons.visibility_off_outlined,color: AppColors.greeney)),
                   border: OutlineInputBorder(
                     borderSide: const BorderSide(color: AppColors.greeney),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   enabledBorder: OutlineInputBorder(
                     
-                    borderSide: const BorderSide(color: AppColors.faderGreeney),
+                    borderSide: const BorderSide(color: AppColors.greeney),
                     borderRadius: BorderRadius.circular(10),
                     
                   ),
@@ -195,7 +196,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           )),
           onPressed: () {
             
+            // ignore: avoid_print
             print(nameController.text);
+            // ignore: avoid_print
             print(passwordController.text);
              Navigator.push(
         context,

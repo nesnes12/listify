@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
 import 'package:listify/utils/colors.dart';
@@ -58,12 +60,12 @@ class _SignupState extends State<Signup> {
                 decoration: InputDecoration(
                   labelText: "Username",
                   labelStyle: const TextStyle(color: Colors.black45,fontWeight: FontWeight.w400),
-                  prefixIcon: const Icon(Icons.person_outline,color: AppColors.faderGreeney),
+                  prefixIcon: const Icon(Icons.person_outline,color: AppColors.greeney),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
                   enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(color: AppColors.faderGreeney),
+                    borderSide: const BorderSide(color: AppColors.greeney),
                     borderRadius: BorderRadius.circular(10),
                   ),
                 ),
@@ -78,12 +80,12 @@ class _SignupState extends State<Signup> {
                 decoration: InputDecoration(
                   labelText: "Email",
                   labelStyle: const TextStyle(color: Colors.black45,fontWeight: FontWeight.w400),
-                  prefixIcon: const Icon(Icons.email_outlined,color: AppColors.faderGreeney),
+                  prefixIcon: const Icon(Icons.email_outlined,color: AppColors.greeney),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
                   enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(color: AppColors.faderGreeney),
+                    borderSide: const BorderSide(color: AppColors.greeney),
                     borderRadius: BorderRadius.circular(10),
                   ),
                 ),
@@ -106,7 +108,7 @@ class _SignupState extends State<Signup> {
                 decoration: InputDecoration(
                   labelText: "Password",
                   labelStyle: const TextStyle(color: Colors.black45,fontWeight: FontWeight.w400),
-                  prefixIcon: const Icon(Icons.password_outlined,color: AppColors.faderGreeney),
+                  prefixIcon: const Icon(Icons.password_outlined,color: AppColors.greeney),
                   suffixIcon: IconButton(
                       onPressed: () {
                         setState(() {
@@ -114,13 +116,13 @@ class _SignupState extends State<Signup> {
                         });
                       },
                       icon: _obscurePassword
-                          ? const Icon(Icons.visibility_outlined,color: AppColors.faderGreeney)
-                          : const Icon(Icons.visibility_off_outlined,color: AppColors.faderGreeney)),
+                          ? const Icon(Icons.visibility_outlined,color: AppColors.greeney)
+                          : const Icon(Icons.visibility_off_outlined,color: AppColors.greeney)),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
                   enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(color: AppColors.faderGreeney),
+                    borderSide: const BorderSide(color: AppColors. greeney),
                     borderRadius: BorderRadius.circular(10),
                   ),
                 ),
@@ -144,7 +146,7 @@ class _SignupState extends State<Signup> {
                 decoration: InputDecoration(
                   labelText: "Confirm Password",
                   labelStyle: const TextStyle(color: Colors.black45,fontWeight: FontWeight.w400),
-                  prefixIcon: const Icon(Icons.password_outlined,color: AppColors.faderGreeney),
+                  prefixIcon: const Icon(Icons.password_outlined,color: AppColors.greeney),
                   suffixIcon: IconButton(
                       onPressed: () {
                         setState(() {
@@ -152,14 +154,14 @@ class _SignupState extends State<Signup> {
                         });
                       },
                       icon: _obscurePassword
-                          ? const Icon(Icons.visibility_outlined,color: AppColors.faderGreeney)
-                          : const Icon(Icons.visibility_off_outlined,color: AppColors.faderGreeney)),
+                          ? const Icon(Icons.visibility_outlined,color: AppColors.greeney)
+                          : const Icon(Icons.visibility_off_outlined,color: AppColors.greeney)),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
-                    borderSide: const BorderSide(color: AppColors.faderGreeney),
+                    borderSide: const BorderSide(color: AppColors.greeney),
                   ),
                   enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(color: AppColors.faderGreeney),
+                    borderSide: const BorderSide(color: AppColors.greeney),
                     borderRadius: BorderRadius.circular(10),
                   ),
                 ),

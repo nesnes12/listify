@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:listify/utils/colors.dart';
-
+import 'task.dart';
 import 'addTask.dart';
 
 
@@ -10,7 +10,7 @@ class MyApp1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Bottom Navigation Bar',
+      title: 'Listify',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -106,21 +106,21 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-class Tasks extends StatelessWidget {
-  const Tasks({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return const Text('Tasks');
-  }
-}
 
-class Categories extends StatelessWidget {
+class Categories extends StatefulWidget {
   const Categories({Key? key}) : super(key: key);
 
   @override
+  State<Categories> createState() => _CategoriesState();
+}
+
+class _CategoriesState extends State<Categories> {
+  @override
   Widget build(BuildContext context) {
-    return const Text('Categories');
+    return const Center(
+      child: Text('Categories text'),
+    );
   }
 }
 
