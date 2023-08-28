@@ -1,6 +1,7 @@
 // ignore_for_file: file_names
-
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:listify/main.dart';
 
 import 'package:listify/utils/colors.dart';
 
@@ -22,6 +23,8 @@ class _SignupState extends State<Signup> {
   final TextEditingController _controllerEmail = TextEditingController();
   final TextEditingController _controllerPassword = TextEditingController();
   final TextEditingController _controllerConFirmPassword =   TextEditingController();
+  TextEditingController _passwordTextController = TextEditingController();
+  TextEditingController _emailTextController = TextEditingController();
 
   bool _obscurePassword = true;
 
@@ -53,25 +56,7 @@ class _SignupState extends State<Signup> {
                 
               ),
              
-              const SizedBox(height: 50),
-              TextFormField(
-                controller: _controllerUsername,
-                keyboardType: TextInputType.name,
-                decoration: InputDecoration(
-                  labelText: "Username",
-                  labelStyle: const TextStyle(color: Colors.black45,fontWeight: FontWeight.w400),
-                  prefixIcon: const Icon(Icons.person_outline,color: AppColors.greeney),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(color: AppColors.greeney),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                ),
-                
-                onEditingComplete: () => _focusNodeEmail.requestFocus(),
-              ),
+             
               const SizedBox(height: 15),
               TextFormField(
                 controller: _controllerEmail,
@@ -187,7 +172,17 @@ class _SignupState extends State<Signup> {
                       ),
                     ),
                     onPressed: () {
-                      Navigator.pop(context);
+                     FirebaseAuth.instance
+                      .createUserWithEmailAndPassword(
+                          email: _emailTextController.text,
+                          password: _passwordTextController.text)
+                      .then((value) {
+                    print("Created New Account");
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => MyApp()));
+                  }).onError((error, stackTrace) {
+                    print("Error ${error.toString()}");
+                  });
                       
                     },
                     child: const Text("Register"),

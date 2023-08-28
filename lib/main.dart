@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:listify/home.dart';
@@ -74,6 +75,8 @@ class MyStatefulWidget extends StatefulWidget {
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   TextEditingController nameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+  TextEditingController _passwordTextController = TextEditingController();
+  TextEditingController _emailTextController = TextEditingController();
   bool _obscurePassword = true;
    final FocusNode _focusNodeEmail = FocusNode();
   final FocusNode _focusNodePassword = FocusNode();
@@ -113,9 +116,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 
                 keyboardType: TextInputType.name,
                 decoration: InputDecoration(
-                  labelText: "Username",
+                  labelText: "Email",
                   labelStyle: const TextStyle(color: Colors.black45,fontWeight: FontWeight.w400),
-                  prefixIcon: const Icon(Icons.person_outline, color: AppColors.greeney,),
+                  prefixIcon: const Icon(Icons.email_outlined, color: AppColors.greeney,),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -195,15 +198,16 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 
           )),
           onPressed: () {
-            
-            // ignore: avoid_print
-            print(nameController.text);
-            // ignore: avoid_print
-            print(passwordController.text);
-             Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => const MyApp1()), 
-      );
+            FirebaseAuth.instance
+                      .signInWithEmailAndPassword(
+                          email: _emailTextController.text,
+                          password: _passwordTextController.text)
+                      .then((value) {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => MyApp1()));
+                  }).onError((error, stackTrace) {
+                    print("Error ${error.toString()}");
+                  });
           },
         ),
       ),
