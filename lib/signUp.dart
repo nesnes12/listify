@@ -51,12 +51,8 @@ class _SignupState extends State<Signup> {
               Text(
                 "Create Your Account ",
                 style: Theme.of(context).textTheme.headlineMedium,
-                textAlign:TextAlign.center,
-                
-                
+                textAlign:TextAlign.center,   
               ),
-             
-             
               const SizedBox(height: 15),
               TextFormField(
                 controller: _controllerEmail,
